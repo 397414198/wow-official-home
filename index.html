@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LoneWalkerLee // 艾泽拉斯官方门户</title>
+  <meta name="description" content="LoneWalkerLee 魔兽世界私服官方首页 - 80年代复古像素官网风格" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- CRT 扫描线 + 暗角 -->
+  <div class="scanlines"></div>
+  <div class="crt-overlay"></div>
+
+  <div class="container">
+    <!-- 顶部状态栏 -->
+    <header class="top-bar">
+      <div class="status">
+        <span class="blink">●</span> SYSTEM ONLINE · AZEROTH LINK
+      </div>
+      <div class="clock" id="clock">00:00:00</div>
+    </header>
+
+    <!-- Logo 区域 -->
+    <div class="logo-area">
+      <img src="assets/logo.png" alt="LoneWalkerLee Logo" class="main-logo" />
+      <p class="subtitle">// WORLD OF WARCRAFT PRIVATE REALM</p>
+      <p class="tagline">艾泽拉斯 · 官方门户 · EST. 2026</p>
+    </div>
+
+    <!-- 横幅 -->
+    <div class="banner-wrap">
+      <img src="assets/banner.png" alt="Azeroth Banner" class="banner-img" />
+      <div class="banner-overlay">
+        <span class="banner-text">ENTER THE WORLD OF WARCRAFT</span>
+      </div>
+    </div>
+
+    <!-- 核心操作区 -->
+    <section class="action-panel">
+      <div class="panel-border">
+        <h2 class="panel-title">[ 账号创建终端 ]</h2>
+        
+        <p class="intro">
+          欢迎来到 <span class="highlight">LoneWalkerLee</span> 私服。<br />
+          在这里，你可以创建属于自己的艾泽拉斯账号，<br />
+          踏上一段由像素与传说交织的旅程。
+        </p>
+
+        <div class="btn-group">
+          <a href="https://wow.lonewalkerlee.dpdns.org/" class="btn primary" target="_blank" rel="noopener">
+            <span class="btn-emoji">⚔</span>
+            创建艾泽拉斯账号
+          </a>
+          <a href="#rules" class="btn secondary">
+            <span class="btn-emoji">📜</span>
+            注册说明
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 注册规则 -->
+    <section id="rules" class="rules-panel">
+      <h2 class="panel-title">[ 注册协议摘要 ]</h2>
+      <ul class="rules-list">
+        <li><span class="key">账号长度</span>：1 ～ 17 个字符</li>
+        <li><span class="key">账号字符</span>：仅支持英文字母 + 数字</li>
+        <li><span class="key">密码长度</span>：1 ～ 16 个字符</li>
+        <li><span class="key">密码字符</span>：字母、数字及常用特殊字符</li>
+        <li><span class="key">邮箱要求</span>：本站不要求填写邮箱</li>
+        <li><span class="key">登录方式</span>：注册完成后即可使用游戏客户端登录</li>
+      </ul>
+      <p class="note">※ 本站为非官方私服门户，仅供学习交流使用。</p>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+      <div class="footer-line">────────────────────────────────────────</div>
+      <p>LONEWALKERLEE SYSTEM v1.1 · POWERED BY GITHUB + CLOUDFLARE</p>
+      <p class="copy">© 2026 LoneWalkerLee · All Rights Reserved in the Pixel Realm</p>
+    </footer>
+  </div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const h = String(now.getHours()).padStart(2, '0');
+      const m = String(now.getMinutes()).padStart(2, '0');
+      const s = String(now.getSeconds()).padStart(2, '0');
+      document.getElementById('clock').textContent = `${h}:${m}:${s}`;
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+
+    // 轻微 CRT 闪烁
+    setInterval(() => {
+      document.body.style.opacity = (0.97 + Math.random() * 0.03).toFixed(2);
+    }, 140);
+  </script>
+</body>
+</html>
