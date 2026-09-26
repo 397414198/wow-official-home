@@ -3,66 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LoneWalkerLee · 私人魔兽服务器</title>
-  <meta name="description" content="LoneWalkerLee 私人魔兽世界服务器 - 认识的朋友一起玩的小服" />
+  <title>LoneWalkerLee · 私人魔兽世界服务器</title>
+  <meta name="description" content="LoneWalkerLee 私人魔兽世界服务器 - 基于 AzerothCore 的朋友小服" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="bg"></div>
-  <div class="overlay"></div>
 
-  <div class="container">
-    <header class="header">
-      <div class="logo">LoneWalkerLee</div>
-      <div class="tag">私人小服 · 仅限朋友</div>
-    </header>
+  <!-- 顶部导航 -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">LoneWalkerLee</div>
+      <div class="nav-links">
+        <a href="#home">首页</a>
+        <a href="https://wow.lonewalkerlee.dpdns.org/" target="_blank">注册账号</a>
+        <a href="#download">下载客户端</a>
+      </div>
+    </div>
+  </nav>
 
-    <main class="main">
-      <h1 class="title">艾泽拉斯见</h1>
-      <p class="desc">
-        这不是公开运营的服务器，只是自己在家闲着没事折腾出来的小玩具。<br />
-        服务器跑在 NAS 上，基于 AzerothCore，认识的朋友想一起玩就来。
+  <!-- 全屏英雄区 -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <!-- 这里放你下载的官方高清壁纸，文件名改成 hero.jpg -->
+      <img src="assets/hero.jpg" alt="Azeroth" class="hero-img" onerror="this.style.display='none'">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-label">私人服务器 · 仅限朋友</p>
+      <h1 class="hero-title">LoneWalkerLee</h1>
+      <p class="hero-sub">艾泽拉斯见</p>
+      <p class="hero-desc">
+        这不是公开运营的服务器，只是自己在家闲着没事折腾出来的小玩具。<br>
+        基于 AzerothCore · Docker · NAS 架设
       </p>
-
-      <div class="actions">
-        <a href="https://wow.lonewalkerlee.dpdns.org/" class="btn primary" target="_blank" rel="noopener">
-          注册账号
-        </a>
-        <button class="btn secondary" id="qqBtn">
-          下载客户端
-        </button>
+      <div class="hero-btns">
+        <a href="https://wow.lonewalkerlee.dpdns.org/" class="btn btn-primary" target="_blank">立即注册</a>
+        <button class="btn btn-outline" id="qqBtn">下载客户端</button>
       </div>
+    </div>
+  </section>
 
-      <div class="qq-box" id="qqBox" hidden>
-        <p>游戏客户端请联系 QQ 获取：</p>
-        <div class="qq-number">397414198</div>
-        <p class="tip">加好友时请备注来意</p>
-      </div>
-
-      <div class="note">
-        <p>完整流程：先找我拿客户端 → 注册账号 → 登录游戏</p>
-        <p>想玩就玩，想折腾就折腾。今晚有没有人喊你「上线，艾泽拉斯见」才是最重要的。</p>
-      </div>
-    </main>
-
-    <footer class="footer">
-      <p>LoneWalkerLee · 基于 Docker · AzerothCore · 私人架设</p>
-      <p class="copy">For Azeroth.</p>
-    </footer>
+  <!-- QQ 弹层 -->
+  <div class="modal" id="qqModal" hidden>
+    <div class="modal-box">
+      <button class="modal-close" id="qqClose">×</button>
+      <h3>下载游戏客户端</h3>
+      <p>请添加 QQ 获取对应版本客户端：</p>
+      <div class="qq-num">397414198</div>
+      <p class="tip">加好友时请备注来意</p>
+    </div>
   </div>
+
+  <!-- 特色区 -->
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">服务器说明</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🏠</div>
+          <h3>私人小服</h3>
+          <p>不是公开运营，只给认识的朋友一起玩。想玩就玩，想关就关。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚙️</div>
+          <h3>技术栈</h3>
+          <p>AzerothCore + Docker + 自家 NAS，全程自己折腾维护。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔐</div>
+          <h3>注册方便</h3>
+          <p>网页直接注册，不要求邮箱，注册完即可登录客户端。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 流程区 -->
+  <section class="steps" id="download">
+    <div class="container">
+      <h2 class="section-title">如何开始</h2>
+      <div class="steps-list">
+        <div class="step">
+          <span class="step-num">1</span>
+          <div>
+            <h4>联系获取客户端</h4>
+            <p>添加 QQ 397414198，备注来意，获取对应版本游戏本体。</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <div>
+            <h4>注册账号</h4>
+            <p>打开注册站创建账号（仅支持字母数字，无需邮箱）。</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <div>
+            <h4>登录游戏</h4>
+            <p>配置好客户端后，使用注册的账号登录，艾泽拉斯见。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <p>LoneWalkerLee · 基于 Docker · AzerothCore · 私人架设</p>
+      <p class="footer-copy">For Azeroth.</p>
+    </div>
+  </footer>
 
   <script>
     const qqBtn = document.getElementById('qqBtn');
-    const qqBox = document.getElementById('qqBox');
+    const qqModal = document.getElementById('qqModal');
+    const qqClose = document.getElementById('qqClose');
 
     qqBtn.addEventListener('click', () => {
-      qqBox.hidden = !qqBox.hidden;
-      if (!qqBox.hidden) {
-        navigator.clipboard.writeText('397414198').catch(() => {});
-      }
+      qqModal.hidden = false;
+      navigator.clipboard.writeText('397414198').catch(() => {});
+    });
+    qqClose.addEventListener('click', () => qqModal.hidden = true);
+    qqModal.addEventListener('click', (e) => {
+      if (e.target === qqModal) qqModal.hidden = true;
     });
   </script>
 </body>
