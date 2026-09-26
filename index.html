@@ -27,8 +27,7 @@
   <!-- 全屏英雄区 -->
   <section class="hero" id="home">
     <div class="hero-bg">
-      <!-- 这里放你下载的官方高清壁纸，文件名改成 hero.jpg -->
-      <img src="assets/hero.jpg" alt="Azeroth" class="hero-img" onerror="this.style.display='none'">
+      <img src="assets/hero.jpg" alt="Azeroth" class="hero-img">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -46,14 +45,27 @@
     </div>
   </section>
 
-  <!-- QQ 弹层 -->
+  <!-- 联系弹层（QQ + 微信） -->
   <div class="modal" id="qqModal" hidden>
     <div class="modal-box">
       <button class="modal-close" id="qqClose">×</button>
       <h3>下载游戏客户端</h3>
-      <p>请添加 QQ 获取对应版本客户端：</p>
-      <div class="qq-num">397414198</div>
-      <p class="tip">加好友时请备注来意</p>
+      <p class="modal-tip">请通过以下方式联系我获取客户端</p>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-label">QQ</div>
+          <div class="qq-num">397414198</div>
+          <p class="tip">点击可复制</p>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">微信</div>
+          <img src="assets/wechat-qr.png" alt="微信二维码" class="wechat-qr">
+          <p class="tip">扫码添加</p>
+        </div>
+      </div>
+
+      <p class="modal-note">加好友时请备注来意</p>
     </div>
   </div>
 
@@ -90,7 +102,7 @@
           <span class="step-num">1</span>
           <div>
             <h4>联系获取客户端</h4>
-            <p>添加 QQ 397414198，备注来意，获取对应版本游戏本体。</p>
+            <p>添加 QQ 397414198 或扫微信二维码，备注来意，获取对应版本游戏本体。</p>
           </div>
         </div>
         <div class="step">
