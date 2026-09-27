@@ -3,147 +3,290 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LoneWalkerLee · 私人魔兽世界服务器</title>
-  <meta name="description" content="LoneWalkerLee 私人魔兽世界服务器 - 基于 AzerothCore 的朋友小服" />
+  <meta name="theme-color" content="#050a12" />
+  <title>LoneWalkerLee · Azeroth</title>
+  <meta name="description" content="一个属于自己的艾泽拉斯。LoneWalkerLee 私人魔兽世界服务器。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- 顶部导航 -->
+  <div class="page-glow"></div>
+  <div class="snow" aria-hidden="true"></div>
+
   <nav class="nav">
     <div class="nav-inner">
-      <div class="nav-logo">LoneWalkerLee</div>
+      <a class="nav-logo" href="#home" aria-label="LoneWalkerLee 首页">
+        <span class="nav-mark">✦</span>
+        <span>LoneWalkerLee</span>
+      </a>
       <div class="nav-links">
         <a href="#home">首页</a>
-        <a href="https://wow.lonewalkerlee.dpdns.org/" target="_blank">注册账号</a>
-        <a href="#download">下载客户端</a>
+        <a href="#azeroth">艾泽拉斯</a>
+        <a href="#story">故事</a>
+        <a href="#start">开始冒险</a>
       </div>
     </div>
   </nav>
 
-  <!-- 全屏英雄区 -->
-  <section class="hero" id="home">
-    <div class="hero-bg">
-      <img src="assets/hero.jpg" alt="Azeroth" class="hero-img">
-    </div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-label">私人服务器 · 仅限朋友</p>
-      <h1 class="hero-title">LoneWalkerLee</h1>
-      <p class="hero-sub">艾泽拉斯见</p>
-      <p class="hero-desc">
-        这不是公开运营的服务器，只是自己在家闲着没事折腾出来的小玩具。<br>
-        基于 AzerothCore · Docker · NAS 架设
-      </p>
-      <div class="hero-btns">
-        <a href="https://wow.lonewalkerlee.dpdns.org/" class="btn btn-primary" target="_blank">立即注册</a>
-        <button class="btn btn-outline" id="qqBtn">下载客户端</button>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <img src="assets/hero.jpg" alt="" class="hero-img" />
       </div>
-    </div>
-  </section>
+      <div class="hero-vignette"></div>
+      <div class="hero-fog"></div>
 
-  <!-- 联系弹层（QQ + 微信） -->
+      <div class="hero-content">
+        <div class="eyebrow"><span></span> PRIVATE AZEROTH <span></span></div>
+        <p class="hero-kicker">WRATH OF THE LICH KING · 3.3.5a</p>
+        <h1 class="hero-title">
+          <span class="title-small">LONEWALKERLEE</span>
+          <span class="title-main">AZEROTH</span>
+        </h1>
+        <div class="hero-divider"><i></i><b>✦</b><i></i></div>
+        <p class="hero-sub">一个属于自己的魔兽世界</p>
+        <p class="hero-desc">
+          没有万人在线，没有商业运营。<br />
+          只是闲着没事，在家里给自己搭了一个艾泽拉斯。
+        </p>
+
+        <div class="hero-btns">
+          <a href="https://wow.lonewalkerlee.dpdns.org/" class="btn btn-primary" target="_blank" rel="noopener">
+            <span>⚔</span> 进入艾泽拉斯
+          </a>
+          <button class="btn btn-ghost" id="qqBtn"><span>✦</span> 获取游戏客户端</button>
+        </div>
+
+        <div class="scroll-hint">
+          <span>SCROLL TO EXPLORE</span>
+          <i></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="factions" id="azeroth">
+      <div class="section-orb"></div>
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">CHOOSE YOUR SIDE</p>
+          <h2>艾泽拉斯的两面</h2>
+          <p>联盟与部落，冰与火。这里不需要选择阵营——只需要踏入这个世界。</p>
+        </div>
+
+        <div class="faction-grid">
+          <article class="faction-card alliance">
+            <div class="faction-art">⚔</div>
+            <div class="faction-copy">
+              <span>THE ALLIANCE</span>
+              <h3>联盟</h3>
+              <p>荣耀、秩序与守护。暴风城的旗帜，在寒风中依然飘扬。</p>
+            </div>
+            <div class="faction-line"></div>
+          </article>
+
+          <div class="faction-center">
+            <div class="rune">✦</div>
+            <div class="vs">VS</div>
+            <p>FOR AZEROTH</p>
+          </div>
+
+          <article class="faction-card horde">
+            <div class="faction-art">☠</div>
+            <div class="faction-copy">
+              <span>THE HORDE</span>
+              <h3>部落</h3>
+              <p>荣耀、自由与血性。奥格瑞玛的战鼓，从未真正停下。</p>
+            </div>
+            <div class="faction-line"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section">
+      <div class="map-backdrop"></div>
+      <div class="container map-layout">
+        <div class="map-copy">
+          <p class="section-kicker">NORTHREND · THE FROZEN CONTINENT</p>
+          <h2>欢迎来到<br /><em>诺森德</em></h2>
+          <p class="map-lead">冰雪覆盖的大地、达拉然的魔法、巫妖王的王座——这里是属于巫妖王之怒时代的艾泽拉斯。</p>
+
+          <div class="location-list">
+            <div><span>01</span><b>ICECROWN</b><small>冰冠冰川</small></div>
+            <div><span>02</span><b>DALARAN</b><small>达拉然</small></div>
+            <div><span>03</span><b>WINTERGRASP</b><small>冬拥湖</small></div>
+          </div>
+        </div>
+
+        <div class="map-art" aria-label="诺森德装饰地图">
+          <div class="map-ring ring-one"></div>
+          <div class="map-ring ring-two"></div>
+          <div class="map-ring ring-three"></div>
+          <div class="map-sigil">❄</div>
+          <div class="map-label label-top">NORTHREND</div>
+          <div class="map-label label-bottom">THE FROZEN THRONE</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story" id="story">
+      <div class="container">
+        <div class="story-frame">
+          <div class="story-symbol">✦</div>
+          <p class="section-kicker">MY AZEROTH</p>
+          <h2>闲着没事，<br /><em>给自己做了一个世界。</em></h2>
+          <p class="story-text">
+            这不是一个大型商业服务器，也没有宏大的运营计划。
+            一台 NAS、一套 Docker、AzerothCore，再加上一点折腾的时间，
+            就这样慢慢拼出了属于自己的艾泽拉斯。
+          </p>
+          <p class="story-text muted">
+            有时候，人就是会突然想把小时候喜欢的东西，
+            重新点亮一次。
+          </p>
+          <div class="story-signature">— LoneWalkerLee</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="adventurers">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">ADVENTURERS</p>
+          <h2>即使没有人，世界也还在运转</h2>
+          <p>PlayerBots 让这个小小的艾泽拉斯，不至于永远只有一个人。</p>
+        </div>
+
+        <div class="class-grid">
+          <div class="class-card"><span>⚔</span><b>WARRIOR</b><small>战士</small></div>
+          <div class="class-card"><span>🏹</span><b>HUNTER</b><small>猎人</small></div>
+          <div class="class-card"><span>✦</span><b>MAGE</b><small>法师</small></div>
+          <div class="class-card"><span>🛡</span><b>PALADIN</b><small>圣骑士</small></div>
+          <div class="class-card"><span>☠</span><b>DEATH KNIGHT</b><small>死亡骑士</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="start" id="start">
+      <div class="start-bg"></div>
+      <div class="container start-inner">
+        <p class="section-kicker">YOUR ADVENTURE AWAITS</p>
+        <h2>现在，轮到你了。</h2>
+        <p>先拿到游戏本体，再注册一个属于你的账号。<br />然后——艾泽拉斯见。</p>
+        <a href="https://wow.lonewalkerlee.dpdns.org/" class="btn btn-primary btn-large" target="_blank" rel="noopener">
+          ⚔ 注册账号 · ENTER AZEROTH
+        </a>
+        <div class="start-note">客户端需要联系服主获取 · 仅限认识的朋友</div>
+      </div>
+    </section>
+
+    <section class="steps">
+      <div class="container">
+        <div class="section-heading compact">
+          <p class="section-kicker">HOW TO ENTER</p>
+          <h2>三步，回到艾泽拉斯</h2>
+        </div>
+
+        <div class="steps-list">
+          <div class="step">
+            <span class="step-num">01</span>
+            <div><b>获取游戏客户端</b><p>添加 QQ 或微信，备注来意，获取对应版本的游戏本体。</p></div>
+          </div>
+          <div class="step">
+            <span class="step-num">02</span>
+            <div><b>注册账号</b><p>打开注册页面创建账号，不需要邮箱，注册完成即可使用。</p></div>
+          </div>
+          <div class="step">
+            <span class="step-num">03</span>
+            <div><b>登录游戏</b><p>配置客户端后登录。愿圣光、部落与联盟——都与你同在。</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <div class="modal" id="qqModal" hidden>
     <div class="modal-box">
-      <button class="modal-close" id="qqClose">×</button>
-      <h3>下载游戏客户端</h3>
-      <p class="modal-tip">请通过以下方式联系我获取客户端</p>
+      <button class="modal-close" id="qqClose" aria-label="关闭">×</button>
+      <p class="section-kicker">ENTER THE WORLD</p>
+      <h3>获取游戏客户端</h3>
+      <p class="modal-tip">游戏本体不放在网页上，请通过以下方式联系我获取。</p>
 
       <div class="contact-grid">
         <div class="contact-item">
           <div class="contact-label">QQ</div>
-          <div class="qq-num">397414198</div>
-          <p class="tip">点击可复制</p>
+          <button class="qq-num" id="copyQQ" type="button">397414198</button>
+          <p class="tip" id="copyTip">点击复制 QQ</p>
         </div>
         <div class="contact-item">
           <div class="contact-label">微信</div>
-          <img src="assets/wechat-qr.png" alt="微信二维码" class="wechat-qr">
+          <img src="assets/wechat-qr.png" alt="微信二维码" class="wechat-qr" />
           <p class="tip">扫码添加</p>
         </div>
       </div>
-
-      <p class="modal-note">加好友时请备注来意</p>
+      <p class="modal-note">加好友时请备注来意。</p>
     </div>
   </div>
 
-  <!-- 特色区 -->
-  <section class="features">
-    <div class="container">
-      <h2 class="section-title">服务器说明</h2>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon">🏠</div>
-          <h3>私人小服</h3>
-          <p>不是公开运营，只给认识的朋友一起玩。想玩就玩，想关就关。</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">⚙️</div>
-          <h3>技术栈</h3>
-          <p>AzerothCore + Docker + 自家 NAS，全程自己折腾维护。</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🔐</div>
-          <h3>注册方便</h3>
-          <p>网页直接注册，不要求邮箱，注册完即可登录客户端。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 流程区 -->
-  <section class="steps" id="download">
-    <div class="container">
-      <h2 class="section-title">如何开始</h2>
-      <div class="steps-list">
-        <div class="step">
-          <span class="step-num">1</span>
-          <div>
-            <h4>联系获取客户端</h4>
-            <p>添加 QQ 397414198 或扫微信二维码，备注来意，获取对应版本游戏本体。</p>
-          </div>
-        </div>
-        <div class="step">
-          <span class="step-num">2</span>
-          <div>
-            <h4>注册账号</h4>
-            <p>打开注册站创建账号（仅支持字母数字，无需邮箱）。</p>
-          </div>
-        </div>
-        <div class="step">
-          <span class="step-num">3</span>
-          <div>
-            <h4>登录游戏</h4>
-            <p>配置好客户端后，使用注册的账号登录，艾泽拉斯见。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 页脚 -->
   <footer class="footer">
+    <div class="footer-rune">✦</div>
     <div class="container">
-      <p>LoneWalkerLee · 基于 Docker · AzerothCore · 私人架设</p>
-      <p class="footer-copy">For Azeroth.</p>
+      <div class="footer-title">WORLD OF AZEROTH</div>
+      <p>Wrath of the Lich King · 3.3.5a</p>
+      <p>AzerothCore · PlayerBots · Docker · Self Hosted</p>
+      <div class="footer-line"></div>
+      <p class="footer-quote">“This world exists simply because I wanted to build it.”</p>
+      <p class="footer-copy">© LoneWalkerLee · For Azeroth.</p>
     </div>
   </footer>
 
   <script>
-    const qqBtn = document.getElementById('qqBtn');
-    const qqModal = document.getElementById('qqModal');
-    const qqClose = document.getElementById('qqClose');
+    const modal = document.getElementById('qqModal');
+    const openBtn = document.getElementById('qqBtn');
+    const closeBtn = document.getElementById('qqClose');
+    const copyBtn = document.getElementById('copyQQ');
+    const copyTip = document.getElementById('copyTip');
 
-    qqBtn.addEventListener('click', () => {
-      qqModal.hidden = false;
-      navigator.clipboard.writeText('397414198').catch(() => {});
+    function openModal() {
+      modal.hidden = false;
+      document.body.classList.add('modal-open');
+    }
+    function closeModal() {
+      modal.hidden = true;
+      document.body.classList.remove('modal-open');
+    }
+
+    openBtn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('397414198');
+        copyTip.textContent = '✓ QQ 已复制';
+      } catch {
+        copyTip.textContent = 'QQ：397414198';
+      }
+      setTimeout(() => copyTip.textContent = '点击复制 QQ', 1800);
     });
-    qqClose.addEventListener('click', () => qqModal.hidden = true);
-    qqModal.addEventListener('click', (e) => {
-      if (e.target === qqModal) qqModal.hidden = true;
-    });
+
+    // 轻微鼠标视差：只作用于首屏背景，移动端自动关闭。
+    const hero = document.querySelector('.hero');
+    const heroImg = document.querySelector('.hero-img');
+    if (window.matchMedia('(pointer:fine)').matches) {
+      hero.addEventListener('mousemove', e => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 10;
+        const y = (e.clientY / window.innerHeight - 0.5) * 6;
+        heroImg.style.transform = `scale(1.06) translate(${x}px, ${y}px)`;
+      });
+      hero.addEventListener('mouseleave', () => {
+        heroImg.style.transform = 'scale(1.06) translate(0, 0)';
+      });
+    }
   </script>
 </body>
 </html>
